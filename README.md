@@ -1,2 +1,7 @@
 # US-Bond-Prediction
-The following repo contains methods of forecasting and analysing bond price strength
+The following repo contains Machine Learning and AI models for Forecasting and Analysing US 10-year Treasury Bonds.
+The Forecasting is conducted using SARIMAX model(ARIMA model results also included) which uses monthly average yield data for the past 5 years and uses the data to predict the yield rate in the upcoming months. The model uses box-cox transformation to normalise the data along with ADF test to check the stationality of the time-series. Using ACF and PACF graphs , the best values for the SARIMAX(and ARIMA) parameters are chosen , and then iterated upon to find the model with highest Accuracy.
+
+The second model uses XGBoosted regression to find the intrinsic value of the Treasury bond using exogenous factors such as Employment data, Unemployment data , Dollar price , Inflation rate , Fed Interest rate , etc. The regression model is fed with monthly average data of these values for the past 5 years to use the indicating values and then produce the intrinsic value of the bond to analyse whether the bond is over or underpriced. 
+
+The Third model(in development) will use custom made dataset to get the news from market related to factors affecting the bond and the bond itself, and give out a decimal value between 0-1 to show the confidence level of the market in the increase of bond price. The model is going to build upon the Google BERT model and train it on specifically bond or bond-related data. This would act as a 2-factor authentication sustem , as many a times, different news in the market produce black swan/anomalous events which can shift the paradigm of the bond.
